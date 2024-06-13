@@ -1,0 +1,16 @@
+{
+    "name": "AnkleBreaker.Utils",
+    "rootNamespace": "",
+    "references": [
+        "GUID:427d4dfb6bf9e684d86e063fe4ccd317"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

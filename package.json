@@ -1,0 +1,19 @@
+{
+  "name": "com.anklebreaker-studio.utils",
+  "version": "0.0.1",
+  "displayName": "AnkleBreaker-studio Utils",
+  "description": "AnkleBreaker-studio Utils contains some utils scripts of the AnkleBreaker team",
+  "unity": "2022.3",
+  "type": "library",
+  "repository": {
+    "url": "https://github.com/AnkleBreaker-Studio/AnkleBreaker-Utils.git",
+    "type": "git"
+  },
+  "author": {
+    "name": "AnkleBreaker-studio",
+    "url": "https://www.anklebreaker-studio.com"
+  },
+  "dependencies": {
+    
+  }
+}

@@ -1,8 +1,8 @@
 {
-    "name": "AnkleBreaker.Utils",
+    "name": "AnkleBreaker.Utils.Inspector",
     "rootNamespace": "",
     "references": [
-        "GUID:427d4dfb6bf9e684d86e063fe4ccd317"
+        "GUID:50ac44283b6c0ba4fa96a4db87baa6ab"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace AnkleBreaker.Inspector
+namespace AnkleBreaker.Utils.Inspector
 {
     public class FolderPathAttribute : PropertyAttribute
     {

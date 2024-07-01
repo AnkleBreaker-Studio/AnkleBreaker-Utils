@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace AnkleBreaker.Inspector
+namespace AnkleBreaker.Utils.Inspector
 {
     [System.AttributeUsage(System.AttributeTargets.Field, Inherited = true, AllowMultiple = true)]
     public class LabelTextAttribute : PropertyAttribute

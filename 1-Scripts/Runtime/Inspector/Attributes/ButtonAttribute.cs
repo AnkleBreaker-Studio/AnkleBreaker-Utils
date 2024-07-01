@@ -4,7 +4,7 @@
     using BaseButtonAttribute = EasyButtons.ButtonAttribute;
 #endif
 
-namespace AnkleBreaker.Inspector
+namespace AnkleBreaker.Utils.Inspector
 {
     public class ButtonAttribute : BaseButtonAttribute
     {

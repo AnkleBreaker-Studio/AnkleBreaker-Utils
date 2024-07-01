@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace AnkleBreaker.Inspector
+namespace AnkleBreaker.Utils.Inspector
 {
     [AttributeUsage(AttributeTargets.Field, Inherited = true, AllowMultiple = false)]
     public class HideIfAttribute : PropertyAttribute

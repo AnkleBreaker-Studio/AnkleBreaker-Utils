@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEditor;
 
-namespace AnkleBreaker.Inspector.Editor
+namespace AnkleBreaker.Utils.Inspector.Editor
 {
     [CustomPropertyDrawer(typeof(HideInNormalInspectorAttribute))]
     class HideInNormalInspectorDrawer : PropertyDrawer

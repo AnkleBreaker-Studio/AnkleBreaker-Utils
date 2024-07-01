@@ -4,7 +4,7 @@ using BaseEditor = Sirenix.OdinInspector.Editor.OdinEditor;
 using BaseEditor = UnityEditor.Editor;
 #endif
 
-namespace AnkleBreaker.Inspector.Editor
+namespace AnkleBreaker.Utils.Inspector.Editor
 {
     public class ABEditor : BaseEditor
     {

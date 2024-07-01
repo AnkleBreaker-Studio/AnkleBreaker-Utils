@@ -2,7 +2,7 @@
 using UnityEditor;
 using UnityEngine;
 
-namespace AnkleBreaker.Inspector.Editor
+namespace AnkleBreaker.Utils.Inspector.Editor
 {
     [CustomPropertyDrawer(typeof(ABToolTipAttribute))]
     public class ABTooltipAttributeDrawer : PropertyDrawer

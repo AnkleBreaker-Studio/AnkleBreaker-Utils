@@ -3,7 +3,7 @@ using UnityEditor;
 using UnityEngine;
 using System.Reflection;
 
-namespace AnkleBreaker.Inspector.Editor
+namespace AnkleBreaker.Utils.Inspector.Editor
 {
     [CustomPropertyDrawer(typeof(ShowIfAttribute))]
     public class ShowIfDrawer : PropertyDrawer

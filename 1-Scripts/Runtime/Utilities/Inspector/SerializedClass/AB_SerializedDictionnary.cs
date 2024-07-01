@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace AnkleBreaker.Inspector
+namespace AnkleBreaker.Utils.Inspector
 {
     /// <summary>
     /// Unity can't serialize Dictionary so here's a custom wrapper that does. Note that you have to

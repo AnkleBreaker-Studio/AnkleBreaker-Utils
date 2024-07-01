@@ -2,7 +2,7 @@ using System;
 using UnityEditor;
 using UnityEngine;
 
-namespace AnkleBreaker.Utils.EditorWindows.Dialog
+namespace AnkleBreaker.Utils.Utils.EditorWindows.Dialog
 {
     public class TextInputDialogWindow : EditorWindow
     {

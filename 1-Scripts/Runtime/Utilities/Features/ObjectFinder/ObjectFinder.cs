@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace AnkleBreaker.Utils
+namespace AnkleBreaker.Utils.ObjectFinder
 {
     public static class ObjectFinder
     {

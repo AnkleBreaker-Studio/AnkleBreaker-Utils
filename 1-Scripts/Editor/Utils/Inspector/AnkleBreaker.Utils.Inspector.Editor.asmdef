@@ -1,5 +1,5 @@
 {
-    "name": "AnkleBreaker.Inspector.Editor",
+    "name": "AnkleBreaker.Utils.Inspector.Editor",
     "rootNamespace": "",
     "references": [
         "GUID:427d4dfb6bf9e684d86e063fe4ccd317",

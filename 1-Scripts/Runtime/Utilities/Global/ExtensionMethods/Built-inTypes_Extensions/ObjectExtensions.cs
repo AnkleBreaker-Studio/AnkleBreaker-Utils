@@ -46,6 +46,9 @@ namespace AnkleBreaker.Utils.ExtensionMethods.BuiltIn_Types
         
         public static GameObject GameObject(this object uo)
         {
+            if (uo == null || uo.Equals((Object)null))
+                return null;
+            
             if (uo is GameObject gameObject)
             {
                 return gameObject;

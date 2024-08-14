@@ -13,6 +13,14 @@ namespace AnkleBreaker.Utils.ExtensionMethods.BuiltIn_Types
             foreach (Transform child in obj.transform)
                 child.gameObject.SetLayerRecursively(layer);
         }
+		
+		public static void SetTagRecursively(this GameObject obj, string tag)
+        {
+            obj.tag = tag;
+
+            foreach (Transform child in obj.transform)
+                child.gameObject.SetTagRecursively(tag);
+        }
 
         public static Bounds CalculateObjectBounds(this GameObject obj, List<Collider> collidersToExclude = null)
         {

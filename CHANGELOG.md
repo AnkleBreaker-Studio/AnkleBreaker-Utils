@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [0.0.4] - 2024-06-18
 
+* Add an extension to GameObject to add a tag recursively to all children
 * Add AB_GPUInstancerPrefabManager to check errors in prefab manager (Editor & Runtime) & register instance in scene in a clean way
 
 ## [0.0.2] - 2024-06-18

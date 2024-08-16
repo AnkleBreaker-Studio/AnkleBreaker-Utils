@@ -1,0 +1,19 @@
+{
+    "name": "AnkleBreaker.Utils.GPUInstancer",
+    "rootNamespace": "",
+    "references": [
+        "GUID:5bd86e4da3e72e240b398ad1f151bf46",
+        "GUID:74b7ab95492e74e49804395faecc2951"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [
+        "GPU_INSTANCER"
+    ],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

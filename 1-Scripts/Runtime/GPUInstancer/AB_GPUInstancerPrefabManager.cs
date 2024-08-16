@@ -34,12 +34,14 @@ namespace ANkleBreaker.GPUInstancer
         [OnInspectorInit]
         private void OnInspectorInit()
         {
+            #if UNITY_EDITOR
             if (gameObject.GetComponentIndex(this) != 0)
             {
                 UnityEditorInternal.ComponentUtility.MoveComponentUp(this);
             }
 
             CheckErrors();
+            #endif
         }
         
         [Button]

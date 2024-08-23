@@ -1,6 +1,9 @@
 using UnityEngine;
-using UnityEditor;
 using System.Collections.Generic;
+
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
 
 // Source code found here https://www.clonefactor.com/wordpress/public/1769/
 
@@ -28,6 +31,7 @@ namespace AnkleBreaker.Utils.Inspector
         public static string Process(Rect position, string input, string[] source, int maxShownCount = 5,
             float levenshteinDistance = 0.5f, string[] toolTips = null, string textGUITag = null)
         {
+            #if UNITY_EDITOR
             string rst = input;
             string tag = "";
 
@@ -180,6 +184,10 @@ namespace AnkleBreaker.Utils.Inspector
             }
 
             return rst;
+            
+            #endif
+
+            return string.Empty;
         }
 
         /// <summary>
@@ -197,11 +205,15 @@ namespace AnkleBreaker.Utils.Inspector
         public static string Process(string input, string[] source, int maxShownCount = 5,
             float levenshteinDistance = 0.5f, string[] toolTips = null, string textGUITag = null)
         {
+            #if UNITY_EDITOR
             if (input == null)
                 return "";
 
             Rect rect = EditorGUILayout.GetControlRect();
             return Process(rect, input, source, maxShownCount, levenshteinDistance, toolTips, textGUITag);
+            #endif
+
+            return string.Empty;
         }
 
         /// <summary>Computes the Levenshtein Edit Distance between two enumerables.</summary>

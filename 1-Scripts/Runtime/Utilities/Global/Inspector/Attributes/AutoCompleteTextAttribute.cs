@@ -1,14 +1,10 @@
 using System;
-
-#if ODIN_INSPECTOR
-using BaseAttribute = System.Attribute;
-#else
-using BaseAttribute = UnityEngine.PropertyAttribute;
-#endif
+using UnityEngine;
 
 namespace AnkleBreaker.Utils.Inspector
 {
-    public class AutoCompleteTextAttribute : BaseAttribute
+    [AttributeUsage(AttributeTargets.Field, Inherited = true, AllowMultiple = false)]
+    public class AutoCompleteTextAttribute : PropertyAttribute
     {
         public string[] Keys;
         public string[] ToolTips;

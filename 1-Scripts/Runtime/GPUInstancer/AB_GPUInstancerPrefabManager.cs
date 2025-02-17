@@ -24,6 +24,13 @@ namespace ANkleBreaker.GPUInstancer
 
         public void Start()
         {
+            #if UNITY_SERVER
+            
+            Destroy(gameObject);
+            return;
+            
+            #endif
+            
             CheckErrors();
         }
 
@@ -92,8 +99,16 @@ namespace ANkleBreaker.GPUInstancer
             FoundError = false;
             _errorMessage = "";
 
+            if (_gpuInstancerPrefabManager.registeredPrefabs == null)
+                return;
+            
             foreach (RegisteredPrefabsData registeredPrefabsData in _gpuInstancerPrefabManager.registeredPrefabs)
             {
+                if (registeredPrefabsData == null || registeredPrefabsData.Equals((Object)null))
+                {
+                    FoundError = true;
+                }
+                
                 foreach (GPUInstancerPrefab gpuInstancerPrefab in registeredPrefabsData.registeredPrefabs)
                 {
                     if (gpuInstancerPrefab == null || gpuInstancerPrefab.Equals((Object)null))

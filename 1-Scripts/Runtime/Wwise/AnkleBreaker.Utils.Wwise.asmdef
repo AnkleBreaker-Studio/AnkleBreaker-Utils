@@ -1,10 +1,10 @@
 {
-    "name": "AnkleBreaker.Utils.GPUInstancer",
+    "name": "AnkleBreaker.Utils.Wwise",
     "rootNamespace": "",
     "references": [
-        "GUID:5bd86e4da3e72e240b398ad1f151bf46",
-        "GUID:74b7ab95492e74e49804395faecc2951",
-        "GUID:9334dc7fe6e00e7438fc7a4593ac1c1f"
+        "GUID:c684c2940e051994e8686411556339e0",
+        "GUID:aba0824f9903b3a4c9f74d02f1fb4e10",
+        "GUID:e66aa8baadeaf37428d25f8dcae10b1c"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
@@ -13,7 +13,8 @@
     "precompiledReferences": [],
     "autoReferenced": true,
     "defineConstraints": [
-        "GPU_INSTANCER"
+        "!UNITY_SERVER",
+        "AB_WWISE"
     ],
     "versionDefines": [],
     "noEngineReferences": false

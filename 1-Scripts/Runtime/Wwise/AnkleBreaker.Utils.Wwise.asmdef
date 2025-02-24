@@ -2,9 +2,7 @@
     "name": "AnkleBreaker.Utils.Wwise",
     "rootNamespace": "",
     "references": [
-        "GUID:c684c2940e051994e8686411556339e0",
-        "GUID:aba0824f9903b3a4c9f74d02f1fb4e10",
-        "GUID:e66aa8baadeaf37428d25f8dcae10b1c"
+        "AK.Wwise.Unity.MonoBehaviour"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

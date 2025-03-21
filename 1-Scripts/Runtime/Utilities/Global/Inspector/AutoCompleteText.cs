@@ -47,7 +47,7 @@ namespace AnkleBreaker.Utils.Inspector
 
             int uiDepth = GUI.depth;
 
-            if (input.Length > 0 && GUI.GetNameOfFocusedControl() == tag)
+            if (!string.IsNullOrEmpty(input) && GUI.GetNameOfFocusedControl() == tag)
             {
                 int lastWordIndex = -1;
 

@@ -5,6 +5,11 @@ All notable changes to this package will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## [0.0.8] - 2025-03-24
+
+* Add MonoScriptFinder to find a mono script in assets
+* Remove !UNITY_SERVER defines on WwiseUtils 
+
 ## [0.0.7] - 2025-02-24
 
 * Add AKAmbientLOD use to enable/disable AKAmbient based on distance to camera 

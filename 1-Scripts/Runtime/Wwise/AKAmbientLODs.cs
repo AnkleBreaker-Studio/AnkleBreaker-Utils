@@ -4,6 +4,25 @@ using UnityEngine;
 
 namespace AnkleBreaker.Utils.Wwise
 {
+    #if UNITY_SERVER
+    
+    public class AKAmbientLODs : MonoBehaviour
+    {
+#if UNITY_EDITOR
+        [OnInspectorGUI]
+        private void OnInspectorGUI()
+        {
+            EditorGUILayout.HelpBox("This script is a server version of AKAmbientLODs, it contains no logic ! Should not be used on server", MessageType.Warning);
+        }
+#endif
+
+        private void Awake()
+        {
+            Destroy(this);
+        }
+    }
+    
+    #else
     [RequireComponent(typeof(AkAmbient))]
     public class AKAmbientLODs : MonoBehaviour
     {
@@ -45,11 +64,6 @@ namespace AnkleBreaker.Utils.Wwise
 
         private void Start()
         {
-#if UNITY_SERVER
-            // don't need this type of LOD on server
-            Destroy(this);
-#endif
-
             _camera = FindFirstObjectByType<Camera>(FindObjectsInactive.Include).transform;
             _current = transform;
             if (_refreshRate > 1)
@@ -115,4 +129,5 @@ namespace AnkleBreaker.Utils.Wwise
             return triggerDropDownList;
         }
     }
+    #endif
 }

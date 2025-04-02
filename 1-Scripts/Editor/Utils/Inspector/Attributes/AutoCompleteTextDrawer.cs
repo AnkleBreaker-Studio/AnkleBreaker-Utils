@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Reflection;
+#if ODIN_INSPECTOR
 using Sirenix.OdinInspector.Editor;
 using Sirenix.Utilities.Editor;
+#endif
 using UnityEditor;
 using UnityEngine;
 

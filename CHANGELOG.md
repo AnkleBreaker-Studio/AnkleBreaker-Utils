@@ -5,6 +5,11 @@ All notable changes to this package will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## [0.0.9] - 2025-04-02
+
+* FIX : Unknown using (odin) : Add missing IF ODIN_INSPECTOR
+* Add RectTransform extension method to get the position displayed in Inspector
+
 ## [0.0.8] - 2025-03-24
 
 * Add MonoScriptFinder to find a mono script in assets

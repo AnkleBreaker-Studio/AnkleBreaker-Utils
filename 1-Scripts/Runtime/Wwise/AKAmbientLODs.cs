@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Linq;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
@@ -68,7 +69,7 @@ namespace AnkleBreaker.Utils.Wwise
 
         private void Start()
         {
-            _camera = FindFirstObjectByType<Camera>(FindObjectsInactive.Include).transform;
+            InitCamera();
             _current = transform;
             if (_refreshRate > 1)
             {
@@ -83,6 +84,14 @@ namespace AnkleBreaker.Utils.Wwise
 
         private void FixedUpdate()
         {
+            if (_camera == null || _camera.Equals((Object)null))
+            {
+                InitCamera();
+            }
+
+            if (_camera == null)
+                return;
+            
             _currentTick++;
             if (_currentTick > _refreshRate + _tickOffset)
             {
@@ -131,6 +140,16 @@ namespace AnkleBreaker.Utils.Wwise
             }
 
             return triggerDropDownList;
+        }
+        
+        private void InitCamera()
+        {
+            Camera mainCamera = FindObjectsByType<Camera>(FindObjectsInactive.Include, FindObjectsSortMode.None).FirstOrDefault(x => x.name != "PlayerViewer");
+
+            if (mainCamera != null)
+            {
+                _camera = mainCamera.transform;
+            }
         }
     }
     #endif

@@ -15,6 +15,12 @@
     "defineConstraints": [
         "GPU_INSTANCER"
     ],
-    "versionDefines": [],
+    "versionDefines": [
+        {
+            "name": "com.sirenix.odin-inspector",
+            "expression": "",
+            "define": "ODIN_INSPECTOR"
+        }
+    ],
     "noEngineReferences": false
 }

@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Linq;
+#if ODIN_INSPECTOR
 using Sirenix.OdinInspector;
+#endif
 using UnityEngine;
 
 #if UNITY_EDITOR
@@ -14,7 +16,9 @@ namespace AnkleBreaker.Utils.Wwise
     public class AKAmbientLODs : MonoBehaviour
     {
 #if UNITY_EDITOR
+#if ODIN_INSPECTOR
         [OnInspectorGUI]
+#endif
         private void OnInspectorGUI()
         {
             EditorGUILayout.HelpBox("This script is a server version of AKAmbientLODs, it contains no logic ! Should not be used on server", MessageType.Warning);
@@ -42,16 +46,30 @@ namespace AnkleBreaker.Utils.Wwise
         private int _tickOffset;
         private int _currentTick;
 
+#if ODIN_INSPECTOR
         [Sirenix.OdinInspector.ReadOnly, ShowInInspector]
+#endif
         private bool _isActive;
 
+#if ODIN_INSPECTOR
         [Sirenix.OdinInspector.ReadOnly, SerializeField, OnInspectorInit(nameof(InitAkAmbient))]
+#else
+        [SerializeField]
+#endif
         private AkAmbient _ambient;
 
+#if ODIN_INSPECTOR
         [SerializeField] [ValueDropdown(nameof(InitTriggerDropDown))]
+#else
+        [SerializeField]
+#endif
         private uint _triggerType;
 
-        [SerializeReference,Sirenix.OdinInspector.ReadOnly, HideInInspector]
+#if ODIN_INSPECTOR
+        [SerializeReference, Sirenix.OdinInspector.ReadOnly, HideInInspector]
+#else
+        [SerializeReference, HideInInspector]
+#endif
         private System.Collections.Generic.Dictionary<uint, string> _triggerTypes;
 
         private void InitAkAmbient()
@@ -60,7 +78,9 @@ namespace AnkleBreaker.Utils.Wwise
             _ambient = GetComponent<AkAmbient>();
         }
 
+#if ODIN_INSPECTOR
         [Sirenix.OdinInspector.Button]
+#endif
         private void SetupTrigger()
         {
             _triggerType = (uint)_ambient.triggerList[0];
@@ -70,6 +90,7 @@ namespace AnkleBreaker.Utils.Wwise
         private void Start()
         {
             InitCamera();
+            InitAkAmbient();
             _current = transform;
             if (_refreshRate > 1)
             {
@@ -130,6 +151,7 @@ namespace AnkleBreaker.Utils.Wwise
             }
         }
 
+#if ODIN_INSPECTOR
         private IEnumerable InitTriggerDropDown()
         {
             ValueDropdownList<uint> triggerDropDownList = new ValueDropdownList<uint>();
@@ -141,6 +163,7 @@ namespace AnkleBreaker.Utils.Wwise
 
             return triggerDropDownList;
         }
+#endif
         
         private void InitCamera()
         {

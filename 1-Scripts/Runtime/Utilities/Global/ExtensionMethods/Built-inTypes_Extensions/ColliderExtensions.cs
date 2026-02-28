@@ -48,7 +48,7 @@ namespace AnkleBreaker.Utils.ExtensionMethods.BuiltIn_Types
         public static void SetCollidersEnablementState(this GameObject obj, IList<bool> enablement)
         {
             Collider[] colliders = obj.GetComponentsInChildren<Collider>();
-            int max = Mathf.Max(colliders.Length, enablement.Count);
+            int max = Mathf.Min(colliders.Length, enablement.Count);
             for (int i = 0; i < max; i++)
                 colliders[i].enabled = enablement[i];
         }

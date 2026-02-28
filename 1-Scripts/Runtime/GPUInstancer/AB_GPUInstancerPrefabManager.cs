@@ -1,5 +1,7 @@
 using GPUInstancer;
+#if ODIN_INSPECTOR
 using Sirenix.OdinInspector;
+#endif
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -8,13 +10,16 @@ using UnityEditor;
 using UnityEditor.SceneManagement;
 #endif
 
-namespace ANkleBreaker.GPUInstancer
+namespace AnkleBreaker.GPUInstancer
 {
     [RequireComponent(typeof(GPUInstancerPrefabManager))]
     public class AB_GPUInstancerPrefabManager : MonoBehaviour
     {
-        [InfoBox("$" + nameof(_errorMessage), InfoMessageType.Error, nameof(FoundError))] [SerializeField]
+#if ODIN_INSPECTOR
+        [InfoBox("$" + nameof(_errorMessage), InfoMessageType.Error, nameof(FoundError))]
         [ReadOnly]
+#endif
+        [SerializeField]
         private GPUInstancerPrefabManager _gpuInstancerPrefabManager;
 
         public bool FoundError { get; private set; }
@@ -38,7 +43,9 @@ namespace ANkleBreaker.GPUInstancer
 
         #region Editor
 
+#if ODIN_INSPECTOR
         [OnInspectorInit]
+#endif
         private void OnInspectorInit()
         {
             #if UNITY_EDITOR
@@ -51,13 +58,17 @@ namespace ANkleBreaker.GPUInstancer
             #endif
         }
         
+#if ODIN_INSPECTOR
         [Button]
+#endif
         public void CheckErrors()
         {
             CheckRegisteredPrefabs();
         }
 
+#if ODIN_INSPECTOR
         [Button("Register Instances in Scene & Save")]
+#endif
         public void RegisterInstancesInSceneAndSave()
         {
             CleanRegisteredPrefabs();
@@ -68,7 +79,9 @@ namespace ANkleBreaker.GPUInstancer
             CheckErrors();
         }
 
+#if ODIN_INSPECTOR
         [Button]
+#endif
         private void CleanRegisteredPrefabs()
         {
             InitGPUInstancerPrefabManager();

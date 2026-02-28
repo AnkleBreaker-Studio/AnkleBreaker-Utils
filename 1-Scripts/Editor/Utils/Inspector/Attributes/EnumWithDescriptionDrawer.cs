@@ -1,3 +1,4 @@
+#if ODIN_INSPECTOR
 using Sirenix.OdinInspector;
 using Sirenix.OdinInspector.Editor;
 using Sirenix.Utilities.Editor;
@@ -20,9 +21,8 @@ namespace AnkleBreaker.Utils.Inspector.Editor
             // Draw the description info box above the enum dropdown if description exists
             if (!string.IsNullOrEmpty(description))
             {
-                // Créez une zone d'affichage pour l'info box au-dessus
                 GUILayout.BeginVertical();
-                GUILayout.Space(5); // Un peu d'espace entre l'info box et l'élément enum
+                GUILayout.Space(5);
                 SirenixEditorGUI.InfoMessageBox(description);
                 GUILayout.EndVertical();
             }
@@ -51,3 +51,4 @@ namespace AnkleBreaker.Utils.Inspector.Editor
         }
     }
 }
+#endif

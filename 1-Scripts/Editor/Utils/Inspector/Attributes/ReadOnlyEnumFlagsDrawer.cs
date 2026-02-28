@@ -1,7 +1,8 @@
-﻿using UnityEditor;
+﻿using AnkleBreaker.Utils.Inspector;
+using UnityEditor;
 using UnityEngine;
 
-namespace AnkleBreakerEditorUtils
+namespace AnkleBreaker.Utils.Inspector.Editor
 {
     [CustomPropertyDrawer(typeof(ReadOnlyEnumFlagsAttribute))]
     public class ReadOnlyEnumFlagsDrawer : PropertyDrawer

@@ -3,7 +3,10 @@ using UnityEngine;
 using UnityEditor;
 #endif
 
-public class ReadOnlyEnumFlagsAttribute : PropertyAttribute
+namespace AnkleBreaker.Utils.Inspector
 {
+    public class ReadOnlyEnumFlagsAttribute : PropertyAttribute
+    {
     
+    }
 }

@@ -13,7 +13,7 @@ namespace AnkleBreaker.Utils.ExtensionMethods.BuiltIn_Types
             float minValue = float.MaxValue;
             float maxValue = float.MinValue;
 
-            for (int i = 0; i < curve.keys.Length; i += curve.keys.Length - 1)
+            for (int i = 0; i < curve.keys.Length; i++)
             {
                 if (curve.keys[i].value > maxValue)
                 {
@@ -32,9 +32,8 @@ namespace AnkleBreaker.Utils.ExtensionMethods.BuiltIn_Types
             {
                 keys[i].value = keys[i].value + 2 * (middleValue - keys[i].value);
                 keys[i].inTangent *= -1f;
-                keys[i].inWeight *= -1f;
                 keys[i].outTangent *= -1f;
-                keys[i].outWeight *= -1f;
+                // Note: weights are kept positive as they represent magnitude, not direction
             }
             curve.keys = keys;
         }

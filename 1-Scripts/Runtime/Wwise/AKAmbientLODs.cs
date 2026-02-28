@@ -167,7 +167,14 @@ namespace AnkleBreaker.Utils.Wwise
         
         private void InitCamera()
         {
-            Camera mainCamera = FindObjectsByType<Camera>(FindObjectsInactive.Include, FindObjectsSortMode.None).FirstOrDefault(x => x.name != "PlayerViewer");
+            // Try Camera.main first (fast path) before falling back to FindObjectsByType
+            Camera mainCamera = Camera.main;
+            
+            if (mainCamera == null || mainCamera.name == "PlayerViewer")
+            {
+                mainCamera = FindObjectsByType<Camera>(FindObjectsInactive.Include, FindObjectsSortMode.None)
+                    .FirstOrDefault(x => x.name != "PlayerViewer");
+            }
 
             if (mainCamera != null)
             {

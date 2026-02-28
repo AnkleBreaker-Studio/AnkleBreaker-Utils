@@ -57,19 +57,26 @@ namespace AnkleBreaker.Utils.ExtensionMethods.BuiltIn_Types
             return firstLetter + str.Substring(1);
         }
         
+        /// <summary>
+        /// Concatenates all strings in the list using the specified separator.
+        /// </summary>
         public static string Concat(this List<string> obj, string separator)
         {
-            string result = "";
-
             int nbrOfElement = obj.Count;
-            if (nbrOfElement > 0)
+            if (nbrOfElement == 0)
+                return string.Empty;
+            
+            if (nbrOfElement == 1)
+                return obj[0];
+
+            var sb = new StringBuilder(obj[0]);
+            for (int i = 1; i < nbrOfElement; i++)
             {
-                result = obj[0];
-                for (int i = 1; i < nbrOfElement; i++)
-                    result += separator + obj[i];
+                sb.Append(separator);
+                sb.Append(obj[i]);
             }
 
-            return result;
+            return sb.ToString();
         }
 
         public static uint IPStringToUint(this string address)

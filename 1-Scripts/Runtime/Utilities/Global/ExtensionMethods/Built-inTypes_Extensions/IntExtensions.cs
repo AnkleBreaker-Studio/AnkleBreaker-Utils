@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-namespace AnkleBreaker.Utils.ExtensionMethods
+namespace AnkleBreaker.Utils.ExtensionMethods.BuiltIn_Types
 {
     public static class IntExtensions
     {

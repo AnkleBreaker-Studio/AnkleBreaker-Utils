@@ -78,6 +78,9 @@ namespace AnkleBreaker.Utils.ExtensionMethods.BuiltIn_Types
             return null;
         }
 
+        /// <summary>
+        /// Finds a child transform by name recursively (case-insensitive).
+        /// </summary>
         public static Transform FindChildRecursiveIgnoreCase(this Transform parent, string childName)
         {
             if (parent.name.Equals(childName, StringComparison.InvariantCultureIgnoreCase))
@@ -135,22 +138,24 @@ namespace AnkleBreaker.Utils.ExtensionMethods.BuiltIn_Types
             return path;
         }
 
+        /// <summary>
+        /// Applies a layer to this transform and all its children recursively.
+        /// Delegates to <see cref="GameObjectExtension.SetLayerRecursively"/>.
+        /// </summary>
+        [System.Obsolete("Use gameObject.SetLayerRecursively() instead.")]
         public static void ApplyLayerToAllChild(this Transform transform, int layer)
         {
-            transform.gameObject.layer = layer;
-            foreach(Transform child in transform)
-            {
-                ApplyLayerToAllChild(child, layer);
-            }
+            transform.gameObject.SetLayerRecursively(layer);
         }
         
+        /// <summary>
+        /// Applies a tag to this transform and all its children recursively.
+        /// Delegates to <see cref="GameObjectExtension.SetTagRecursively"/>.
+        /// </summary>
+        [System.Obsolete("Use gameObject.SetTagRecursively() instead.")]
         public static void ApplyTagToAllChild(this Transform transform, string tag)
         {
-            transform.gameObject.tag = tag;
-            foreach(Transform child in transform)
-            {
-                ApplyTagToAllChild(child, tag);
-            }
+            transform.gameObject.SetTagRecursively(tag);
         }
         
         public static Bounds TransformBounds(this Transform _transform, Bounds _localBounds)
@@ -171,6 +176,10 @@ namespace AnkleBreaker.Utils.ExtensionMethods.BuiltIn_Types
             return new Bounds { center = center, extents = extents };
         }
         
+        /// <summary>
+        /// Removes all children of this transform. Use <see cref="DestroyAllChildren"/> instead.
+        /// </summary>
+        [System.Obsolete("Use DestroyAllChildren() instead.")]
         public static void RemoveChildren (this Transform tfm)
         {
             for (int i=tfm.childCount-1; i>=0; i--)
@@ -186,6 +195,10 @@ namespace AnkleBreaker.Utils.ExtensionMethods.BuiltIn_Types
             }
         }
         
+        /// <summary>
+        /// Finds a child transform by name recursively (case-sensitive).
+        /// Consider using <see cref="FindChildRecursiveIgnoreCase"/> for case-insensitive search.
+        /// </summary>
         public static Transform FindChildRecursive (this Transform tfm, string name)
         {
             int numChildren = tfm.childCount;

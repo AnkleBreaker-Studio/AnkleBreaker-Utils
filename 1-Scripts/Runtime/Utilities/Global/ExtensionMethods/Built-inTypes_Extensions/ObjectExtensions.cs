@@ -45,9 +45,12 @@ namespace AnkleBreaker.Utils.ExtensionMethods.BuiltIn_Types
                 or decimal;
         }
         
-        public static GameObject GameObject(this object uo)
+        /// <summary>
+        /// Gets the GameObject from a UnityEngine.Object (GameObject or Component).
+        /// </summary>
+        public static GameObject GameObject(this UnityEngine.Object uo)
         {
-            if (uo == null || uo.Equals((UnityEngine.Object)null))
+            if (uo == null)
                 return null;
             
             if (uo is GameObject gameObject)

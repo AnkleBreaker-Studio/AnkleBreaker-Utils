@@ -5,6 +5,21 @@ All notable changes to this package will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## [0.0.12] - 2026-02-28
+
+* Rename DictionnaryExtensions.cs and AB_SerializedDictionnary.cs to fix "Dictionary" typo in filenames
+* Mark duplicate TransformExtensions (ApplyLayerToAllChild, ApplyTagToAllChild, RemoveChildren) as obsolete
+* Add XML docs to FindChildRecursive and FindChildRecursiveIgnoreCase
+* FIX: ForceRefreshAllChildren now actually refreshes all child ContentSizeFitters
+* FIX: StringExtensions.Concat O(n²) performance — use StringBuilder instead of string concatenation
+* FIX: DateTimeExtensions.TryParseUnixTimestampStrToDateTime inverted inLocalTime logic
+* Mark DateTimeExtensions.UnixTimestamp as obsolete (misleading extension — ignores instance)
+* FIX: IntExtensions namespace corrected to AnkleBreaker.Utils.ExtensionMethods.BuiltIn_Types
+* FIX: AnimationCurveExtensions.Invert now samples all keys for min/max and preserves weight signs
+* Optimize AKAmbientLODs.InitCamera — try Camera.main before expensive FindObjectsByType
+* Restrict ObjectExtensions.GameObject() from System.Object to UnityEngine.Object
+* Add RSG.Promise to Third Party Notices
+
 ## [0.0.11] - 2026-02-28
 
 * FIX: Remove merge conflict markers from CHANGELOG

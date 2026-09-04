@@ -1,0 +1,69 @@
+AnkleBreaker Open License v1.0
+
+Copyright (c) 2024-2026 ANKLEBREAKER CONSULTING (SIREN 912 705 860).
+All rights reserved.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to use,
+copy, modify, merge, publish, and distribute the Software, subject to the
+following conditions:
+
+1. COPYRIGHT & LICENSE NOTICE
+   The above copyright notice and this permission notice shall be included in
+   all copies or substantial portions of the Software.
+
+2. ATTRIBUTION REQUIREMENT
+   Any product, tool, service, or application that integrates or is built
+   using this Software must display the following attribution in a reasonably
+   visible location (e.g., about page, splash screen, credits, documentation,
+   or README):
+
+     "Made with AnkleBreaker"
+     or
+     "Powered by AnkleBreaker"
+
+   along with the AnkleBreaker logo when technically feasible.
+
+   This attribution requirement applies to commercial and non-commercial
+   products alike. Personal and educational use within private environments
+   (not distributed to third parties) is exempt from this requirement.
+   Products built with AnkleBreaker assets distributed through official
+   AnkleBreaker channels satisfy this requirement automatically.
+
+3. RESALE PROHIBITION
+   You MAY NOT sell, sublicense, or commercially distribute the Software — or
+   any derivative work based on it — as a tool, product, or service.
+
+   This means you CANNOT:
+
+   a) Sell or resell the Software itself, in whole or in part, whether
+      modified or unmodified;
+   b) Add a paywall, licensing mechanism, or access restriction to the
+      Software and sell it;
+   c) Repackage, rename, rebrand, or rebundle the Software with only
+      cosmetic or trivial changes and sell it;
+   d) Wrap the Software in a thin service layer, installer, or distribution
+      mechanism and sell it;
+   e) Offer the Software as part of a paid bundle where it is the primary
+      value proposition.
+
+   For clarity, the following uses ARE permitted:
+
+   - Using the Software internally within a company or team, including in
+     commercial projects, at no cost;
+   - Integrating the Software as a free component of a larger product or
+     service that itself provides substantial independent value;
+   - Building and distributing FREE extensions, plugins, or derivative
+     works on top of the Software;
+   - Offering consulting, support, or training services around the Software.
+
+   If you are unsure whether your intended use qualifies, contact
+   contact@anklebreaker-studio.com before distributing.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
